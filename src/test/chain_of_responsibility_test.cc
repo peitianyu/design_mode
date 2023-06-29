@@ -53,7 +53,7 @@ private:
     ChainOfResponsibility* next_;
 };
 
-JUST_RUN_TEST(chain_of_responsibility, test)
+// JUST_RUN_TEST(chain_of_responsibility, test)
 TEST(chain_of_responsibility, test)
 {
     Responsibility1* r1 = new Responsibility1();
