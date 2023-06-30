@@ -43,6 +43,8 @@ public:
 
 #include<map>
 
+// 根据同一个基类的不同子类, 根据不同的类型, 执行不同的操作, 这里的GetType()用于获取当前所在的子类
+// 使用map来存储不同的子类, 根据不同的类型来执行不同的操作
 // JUST_RUN_TEST(strategy, test)
 TEST(strategy, test)
 {
@@ -54,4 +56,8 @@ TEST(strategy, test)
     m[ONE]->Print();
     m[TWO]->Print();
     m[THREE]->Print();
+
+    delete m[ONE];
+    delete m[TWO];
+    delete m[THREE];
 }
