@@ -7,7 +7,7 @@
 // 观察者接口
 class Observer {
 public:
-    virtual void update() = 0;
+    virtual void update() = 0; // 观测主要通过这部分实现
 };
 
 // 具体观察者类
@@ -45,7 +45,8 @@ public:
     }
 };
 
-
+// 主题类包含了观察者列表, 通过attach和detach来添加和移除观察者, 通过notify来通知所有观察者
+// 观察者与被观察者之间是松耦合的, 通过接口来实现, 从而实现了观察者模式
 JUST_RUN_TEST(observer, test)
 TEST(observer, test)
 {
